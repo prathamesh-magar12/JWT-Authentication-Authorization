@@ -6,6 +6,34 @@ This project is a MERN stack application with separate frontend and backend dire
 
 ---
 
+## Key Features:
+
+- User Authentication: Secure user signup and login.
+- JWT-Based Security: Uses JWT to authorize users for accessing protected resources.
+- Protected Routes: Both frontend and backend routes are protected to ensure only authenticated users can access them.
+- Session Persistence: User login state is maintained even after a page refresh.
+- API Interaction: The React frontend communicates with the Express backend to fetch data.
+- Notifications: Provides user feedback for actions like login, logout, and data fetching using react-toastify.
+
+---
+
+## Technology Stack
+
+### Frontend:
+
+- React: For building the user interface.
+- React Router (`react-router-dom`): For handling client-side routing.
+- React Toastify: For displaying notifications.
+- CSS: For styling the application.
+
+### Backend:
+
+- Node.js: JavaScript runtime environment.
+- Express.js: Web framework for Node.js, used to build the REST API.
+- JSON Web Token (`jsonwebtoken`): For creating and verifying authentication tokens.
+
+---
+
 ## Frontend
 
 ### Structure
