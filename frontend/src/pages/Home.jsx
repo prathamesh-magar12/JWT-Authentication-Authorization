@@ -25,7 +25,7 @@ const Home = () => {
 
   const fetchProducts = async () => {
     try {
-      const url = "API/products";
+      const url = `${API}/products`;
       const response = await fetch(url, {
         method: "get",
         headers: {

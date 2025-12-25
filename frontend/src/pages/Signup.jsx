@@ -28,7 +28,7 @@ const Signup = () => {
       return handleError("name, email and password are required");
     }
     try {
-      const url = "API/signup";
+      const url = `${API}/signup`;
       const response = await fetch(url, {
         method: "POST",
         headers: {
