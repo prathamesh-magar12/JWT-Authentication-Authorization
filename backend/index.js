@@ -6,7 +6,7 @@ const authRouter = require("./Routes/authRouter");
 const productRouter = require("./Routes/productRouter");
 
 app.use(cors({
-  origin: "https://jwt-authentication-authorization-one.vercel.app/",
+  origin: "https://jwt-authentication-authorization-one.vercel.app",
   credentials: true
 }));
 
