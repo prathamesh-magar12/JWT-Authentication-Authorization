@@ -19,6 +19,9 @@ const Login = () => {
     copyinfo[name] = value;
     setloginInfo(copyinfo);
   };
+
+  const API=import.meta.env.VITE_API_URL;
+
   const handleLogin = async (e) => {
     e.preventDefault();
     const { email, password } = loginInfo;
@@ -26,7 +29,7 @@ const Login = () => {
       return handleError("email and password are required");
     }
     try {
-      const url = "http://localhost:8080/auth/login";
+      const url = "API/login";
       const response = await fetch(url, {
         method: "POST",
         headers: {

@@ -18,6 +18,9 @@ const Signup = () => {
     copyinfo[name] = value;
     setSignupInfo(copyinfo);
   };
+
+  const API=import.meta.env.VITE_API_URL;
+
   const handleSignup = async (e) => {
     e.preventDefault();
     const { name, email, password } = signupInfo;
@@ -25,7 +28,7 @@ const Signup = () => {
       return handleError("name, email and password are required");
     }
     try {
-      const url = "http://localhost:8080/auth/signup";
+      const url = "API/signup";
       const response = await fetch(url, {
         method: "POST",
         headers: {

@@ -21,9 +21,11 @@ const Home = () => {
     }, 2000);
   };
 
+  const API=import.meta.env.VITE_API_URL;
+
   const fetchProducts = async () => {
     try {
-      const url = "http://localhost:8080/products";
+      const url = "API/products";
       const response = await fetch(url, {
         method: "get",
         headers: {
