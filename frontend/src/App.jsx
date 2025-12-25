@@ -3,7 +3,7 @@ import "./App.css";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Home from "./pages/Home";
-import RefreshHandler from "./refreshHandler";
+import RefreshHandler from "./RefreshHandler";
 import { ToastContainer } from "react-toastify";
 import { useState } from "react";
 
