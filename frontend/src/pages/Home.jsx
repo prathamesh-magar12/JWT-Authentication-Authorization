@@ -20,33 +20,36 @@ const Home = () => {
       Navigate("/login");
     }, 2000);
   };
-
   const API=import.meta.env.VITE_API_URL;
 
-  const fetchProducts = async () => {
-    try {
-      const url = `${API}/products`;
-      const response = await fetch(url, {
-        method: "get",
-        headers: {
-          authorization: `bearer ${localStorage.getItem("jwtToken")}`,
-        },
-      });
-      const result = await response.json();
-      if (!response.ok) {
-        handleError(result.message);
-        return;
-      }
-      setproducts(result);
-      handleSuccess("Fetch information successfully...");
-    } catch (err) {
-      handleError(err.message || "Something went wrong!");
-    }
-  };
-
   useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const url = `${API}/products`;
+        const response = await fetch(url, {
+          method: "GET",
+          headers: {
+            authorization: `Bearer ${localStorage.getItem("jwtToken")}`,
+          },
+        });
+
+        const result = await response.json();
+
+        if (!response.ok) {
+          handleError(result.message);
+          return;
+        }
+
+        setproducts(result);
+        handleSuccess("Fetch information successfully...");
+      } catch (err) {
+        handleError(err.message || "Something went wrong!");
+      }
+    };
+
     fetchProducts();
-  }, []);
+  }, [API]);
+
 
   return (
     <div>
