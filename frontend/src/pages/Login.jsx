@@ -29,7 +29,7 @@ const Login = () => {
       return handleError("email and password are required");
     }
     try {
-      const url = `${API}/login`;
+      const url = `${API}/auth/login`;
       const response = await fetch(url, {
         method: "POST",
         headers: {
