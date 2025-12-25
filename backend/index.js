@@ -5,6 +5,11 @@ const cors = require("cors");
 const authRouter = require("./Routes/authRouter");
 const productRouter = require("./Routes/productRouter");
 
+app.use(cors({
+  origin: "https://jwt-authentication-authorization-one.vercel.app/",
+  credentials: true
+}));
+
 require("dotenv").config();
 require("./Models/db");
 const PORT = process.env.PORT || 8080;
