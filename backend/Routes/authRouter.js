@@ -4,6 +4,7 @@ const {
   signupValidation,
   loginValidation,
 } = require("../Middlewares/AuthMiddleware");
+
 const { signup, login } = require("../Controllers/AuthController");
 
 router.post("/login", loginValidation, login);
